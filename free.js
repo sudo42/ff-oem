@@ -11,6 +11,15 @@ if (window.location.host === 'engage.streaming.rwth-aachen.de') {
       window._meta = meta
       let videoTracks = meta['search-results'].result.mediapackage.media.track
         .filter(t=> t.mimetype.startsWith('video/') && t.url.startsWith('http'))
+        .sort((a,b) => {
+          let mimeComp = a.mimetype.localeCompare(b.mimetype)
+          if (mimeComp) return mimeComp
+          let resAI = parseInt(a.video.resolution)
+          let resBI = parseInt(b.video.resolution)
+          if (resAI > resBI) return 1
+          if (resAI < resBI) return -1
+          return 0
+        })
       videoTracks.forEach(t=>console.log(t.id, t.mimetype, t.video.resolution, t.url))
       if (inFrame) {
         console.debug('posting message')
