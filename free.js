@@ -62,7 +62,7 @@ function genLinkContainer(tracks, meta) {
   details.appendChild(summary)
 
   let videoLinkList = document.createElement('ul')
-  msg.data.videoTracks.forEach(track => {
+  tracks.forEach(track => {
     let li = document.createElement('li')
     let a = document.createElement('a')
     a.href = track.url
