@@ -28,12 +28,20 @@ if (window.location.host === 'engage.streaming.rwth-aachen.de') {
     })
 } else if (window.location.host === 'moodle.rwth-aachen.de') {
   window.addEventListener('message', msg => {
+    // this message is not meant for us
+    if (!msg.data || !msg.data.videoTracks) return true;
+
     let mainFrame = document.querySelector('div[role=main]')
     let sourceFrame = null;
     let _frames = [...document.querySelectorAll('iframe')].filter(f => f.contentWindow === msg.source)
     if (_frames.length) { sourceFrame = _frames[0] }
 
     let videoLinkList = genLinkContainer(msg.data.videoTracks, msg.data.meta)
+    if (document.getElementById(videoLinkList.id)) {
+      console.debug('looks like we did already insert download links‽')
+      // TODO: think about remove + insert vs keep existing
+      document.getElementById(videoLinkList.id).remove()
+    }
     mainFrame.appendChild(videoLinkList)
 
     // if video frame was found: step out of the video container(s) and place links just below the frame
@@ -49,9 +57,19 @@ if (window.location.host === 'engage.streaming.rwth-aachen.de') {
   })
 }
 
+function genIdPrefix(videoId) {
+  return `_ext-openExcellence_vid-${videoId}`
+}
+function genVideoContainerId(vidIdOrMeta) {
+  if (typeof vidIdOrMeta === 'object')
+    vidIdOrMeta = vidIdOrMeta['search-results'].result.id
+  return `${genIdPrefix(vidIdOrMeta)}_container`
+}
+
 function genLinkContainer(tracks, meta) {
   let videoTitle = meta['search-results'].result.dcTitle || '?'
   let details = document.createElement('details')
+  details.id = genVideoContainerId(meta)
   details.classList.add('_ext-openExcellenceMedia_container')
   let summary = document.createElement('summary')
   summary.innerText = `Download video: ${videoTitle}`
