@@ -13,6 +13,12 @@ About This Software
 
 Further development is necessary and will take place when I find some more free time …
 
+### does it have a name?
+
+Not really … at least nothing that I'd consider final.
+
+Nevertheless, in the code it is called _Open Excellence Media_  or for short **OEM**.
+
 
 ### what is it good for?
 
@@ -30,10 +36,10 @@ By placing a bow with direct links to the videos above them.
   - …
 
 ### 2do
-  - going to bed
-  - styling (I love CSS, not joking here!)
-  - adding links in video-only tabs, too
-  - packaging
-  - good name + icon
-  - further investigation into the OpenCast API (looks like one might be able to have some fun with it)
-  - …
+  - [X] going to bed
+  - [ ] styling (I love CSS, not joking here!)
+  - [ ] adding links in video-only tabs, too
+  - [ ] packaging
+  - [ ] good name + icon
+  - [ ] further investigation into the OpenCast API (looks like one might be able to have some fun with it)
+  - [ ] …
