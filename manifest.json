@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "openExcellence",
+  "name": "openExcellenceMedia",
   "version": "0.0.1",
   "description": "",
   "icons": {
@@ -11,7 +11,8 @@
     {
       "all_frames": true,
       "matches": ["https://moodle.rwth-aachen.de/*", "https://engage.streaming.rwth-aachen.de/*"],
-      "js": ["free.js"]
+      "js": ["free.js"],
+      "css": ["free.css"]
     }
   ]
 

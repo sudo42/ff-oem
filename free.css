@@ -1,0 +1,21 @@
+
+._ext-openExcellenceMedia_container .videoLinkList {
+  --c-rwth-violett: rgb(97,33,88);
+  --c-link-bg: var(--c-rwth-violett);
+  --c-link-fg: #fff;
+}
+._ext-openExcellenceMedia_container .videoLinkList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+._ext-openExcellenceMedia_container .videoLinkList .videoLink {
+  display: inline-block;
+  padding: .5em 1em;
+  background: var(--c-link-bg);
+  color: var(--c-link-fg);
+  margin: .25em .5em;
+  border-radius: .2em;
+}
