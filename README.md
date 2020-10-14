@@ -37,6 +37,17 @@ By placing a bow with direct links to the videos above them.
   - personal archive to re-watch lecture contents in a few semesters (relevant for exams, personal interest, …)
   - …
 
+### how to use it
+This is, how it should (approximately) look:
+![Partial screenshot of a (dummy) course page showing the download link inserted by this add-on.
+Text: "Download video: Lecture Fundamentals of applied theoretical sciences"
+Below are the links: "640x360 (mp4)", "1280x720 (mp4)", and "1920x1080 (mp4)".](https://git.fsmpi.rwth-aachen.de/moodleOpenCastDownloads/ff-ext/-/raw/_static-resources/images/screenshot-buttons.png)
+
+  - The text "Download video: $nameOfVideo" should appear below each embedded video.
+  - It should be possible to simply click on it, which should reveal a set of links.
+  - These should be direct links to video files (with the displayed resolution).
+  - Hover (on desktop, probably long-press on mobile? didn't try that) a link to see more details.
+
 ### where to get it?
 Sadly, this extension was not accepted into Mozilla's offizial addon gallery, because the target audience is too limited.
 Nevertheless it is possible to get extensions signed by Mozilla and self-distribute them.
