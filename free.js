@@ -10,15 +10,12 @@ if (window.location.host === 'engage.streaming.rwth-aachen.de') {
       window._meta = meta
       let videoTracks = meta['search-results'].result.mediapackage.media.track
         .filter(t=> t.mimetype.startsWith('video/') && t.url.startsWith('http'))
-        .sort((a,b) => {
-          let mimeComp = a.mimetype.localeCompare(b.mimetype)
-          if (mimeComp) return mimeComp
-          let resAI = parseInt(a.video.resolution)
-          let resBI = parseInt(b.video.resolution)
-          if (resAI > resBI) return 1
-          if (resAI < resBI) return -1
-          return 0
-        })
+        .sort((a,b) =>
+            a.mimetype.localeCompare(b.mimetype)
+            || Math.sign(parseInt(a.video.resolution) - parseInt(b.video.resolution))
+            || Math.sign(a.video.bitrate - b.video.bitrate)
+            || 00
+        )
       videoTracks.forEach(t=>console.debug(t.id, t.mimetype, t.video.resolution, t.url))
       if (inFrame) {
         window.parent.postMessage({videoTracks, meta}, '*')
@@ -66,6 +63,19 @@ function genVideoContainerId(vidIdOrMeta) {
   return `${genIdPrefix(vidIdOrMeta)}_container`
 }
 
+const FMT = (()=>{
+  const _locale = undefined
+  const _defaults = { style: 'unit', unitDisplay: 'narrow'}
+  const kbps = new Intl.NumberFormat(undefined, {..._defaults, unit: 'kilobit-per-second'})
+  const base = new Intl.NumberFormat(undefined, {..._defaults, style: 'decimal' })
+
+  return {
+    fps: v => `${base.format(v)}fps`,
+    hz: v => `${base.format(v/1000)}kHz`,
+    bps: v => kbps.format(v/1000),
+  }
+})()
+
 function genLinkContainer(tracks, meta) {
   let videoTitle = meta['search-results'].result.dcTitle || '?'
   let details = document.createElement('details')
@@ -78,11 +88,17 @@ function genLinkContainer(tracks, meta) {
   let videoLinkList = document.createElement('ul')
   videoLinkList.classList.add('videoLinkList')
   tracks.forEach(track => {
+    let mVid = track.video || {}
+    let mAud = track.audio || {}
     let li = document.createElement('li')
     let a = document.createElement('a')
     a.classList.add('videoLink')
     a.href = track.url
-    a.innerText = `${track.video.resolution} (${track.mimetype.replace(/^video\//, '')})`
+    a.innerText = `${mVid.resolution} (${track.mimetype.replace(/^video\//, '')})`
+    a.title = `Title: ${videoTitle}
+Type: ${track.mimetype}
+Video: ${mVid.resolution}@${FMT.fps(mVid.framerate)} (${FMT.bps(mVid.bitrate)}, ${mVid.encoder.type})
+Audio: ${mAud.channels}ch@${FMT.hz(mAud.samplingrate)} (${FMT.bps(mAud.bitrate)}, ${mAud.encoder.type})`
     li.appendChild(a)
     videoLinkList.appendChild(li)
   })
