@@ -5,11 +5,11 @@
   "description": "Adds download links to videos on RWTH moodle which are served using an OpenCast iframe.",
   "homepage_url": "https://git.fsmpi.rwth-aachen.de/moodleOpenCastDownloads/ff-ext",
   "icons": {
-    "48": "icons/base-00.export-plain-opti.svg",
-    "96": "icons/base-00.export-plain-opti.svg",
-    "128": "icons/base-00.export-plain-opti.svg",
-    "256": "icons/base-00.export-plain-opti.svg",
-    "512": "icons/base-00.export-plain-opti.svg"
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg",
+    "128": "icons/icon.svg",
+    "256": "icons/icon.svg",
+    "512": "icons/icon.svg"
   },
 
   "content_scripts": [
