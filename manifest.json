@@ -22,7 +22,7 @@
   ],
   "browser_specific_settings": {
     "gecko": {
-        "id": "{cc975a31-cc03-49ce-8c82-2b265f327227}",
+        "id": "{ad4c20e4-957a-45ff-a48e-a5497ccd59d5}",
         "strict_min_version": "60.0",
         "update_url": "https://dev.sudo42.de/public/ff-addons/updates.json"
     }

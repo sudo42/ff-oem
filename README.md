@@ -22,8 +22,10 @@ Nevertheless, in the code it is called _Open Excellence Media_  or for short **O
 
 ### what is it good for?
 
-A huge portion of videos in RWTH moodle are hosted on RWTH's OpenCast instance.
-The way it is set up prevents (likely intentionally) a user-friendly approach to downloading videos.
+
+Most videos (eg. lecture recordings) embedded in RWTH Aachen University's moodle are hosted on an OpenCast.
+These videos are usually embedded using an iframe, which makes it (intentionally) hard to download them for offline use.
+
 This extension want's to help by liberating lecture recordings and other videos provided in this rather restrictive manner.
 
 How?
@@ -34,6 +36,18 @@ By placing a bow with direct links to the videos above them.
   - learning on the train, at the beach, in the park, … you get it
   - personal archive to re-watch lecture contents in a few semesters (relevant for exams, personal interest, …)
   - …
+
+### where to get it?
+Sadly, this extension was not accepted into Mozilla's offizial addon gallery, because the target audience is too limited.
+Nevertheless it is possible to get extensions signed by Mozilla and self-distribute them.
+(With a bit of luck even automated updates should work just fine.)
+
+You should (hopefully) be able to get the latest version from <https://dev.sudo42.de/public/ff-addons/openexcellencemedia-latest.xpi>.
+The [releases page of this project](https://git.fsmpi.rwth-aachen.de/moodleOpenCastDownloads/ff-ext/-/releases) should contain them as well.
+
+And, of course, you can build this extension from source on your own.
+Or modify it to work as user script.
+This project is licensed unser EUPL, so feel free to use, read, adapt, or share the code.
 
 ### 2do
   - [X] going to bed
