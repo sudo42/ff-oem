@@ -42,8 +42,20 @@ Sadly, this extension was not accepted into Mozilla's offizial addon gallery, be
 Nevertheless it is possible to get extensions signed by Mozilla and self-distribute them.
 (With a bit of luck even automated updates should work just fine.)
 
-You should (hopefully) be able to get the latest version from <https://dev.sudo42.de/public/ff-addons/openexcellencemedia-latest.xpi>.
+#### downloads, with caveats _\*sigh\*_
+
+You should (hopefully) be able to get the latest version from:
+```
+https://dev.sudo42.de/public/ff-addons/openexcellencemedia-latest.xpi
+```
+(The link ist not shown as link, because firefox blocks installations of extensions on other domains by default.
+I'm sorry … please just copy it and open the page yourself.)
+
 The [releases page of this project](https://git.fsmpi.rwth-aachen.de/moodleOpenCastDownloads/ff-ext/-/releases) should contain them as well.
+(This one has caveats as well: GitLab will usually deliver the files in a way, that they are downloaded instead of prompting for installtion.
+You should nevertheless be able to install the downloaded file from Firefox's addon page.)
+
+#### grab the source
 
 And, of course, you can build this extension from source on your own.
 Or modify it to work as user script.
