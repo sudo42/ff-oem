@@ -1,5 +1,5 @@
 About This Software
--------------------
+===================
 
 **WARNING:** This extension is neither …
   - ~~packaged~~  (should be by now)
@@ -13,14 +13,14 @@ About This Software
 
 Further development is necessary and will take place when I find some more free time …
 
-### does it have a name?
+## does it have a name?
 
 Not really … at least nothing that I'd consider final.
 
 Nevertheless, in the code it is called _Open Excellence Media_  or for short **OEM**.
 
 
-### what is it good for?
+## what is it good for?
 
 
 Most videos (eg. lecture recordings) embedded in RWTH Aachen University's moodle are hosted on an OpenCast.
@@ -31,13 +31,13 @@ This extension want's to help by liberating lecture recordings and other videos 
 How?
 By placing a bow with direct links to the videos above them.
 
-### reasons for downloading vidoes
+## reasons for downloading vidoes
   - a bad internet connection (streaming feels like 90% buffering and 10% watching)
   - learning on the train, at the beach, in the park, … you get it
   - personal archive to re-watch lecture contents in a few semesters (relevant for exams, personal interest, …)
   - …
 
-### how to use it
+## how to use it
 This is, how it should (approximately) look:
 ![Partial screenshot of a (dummy) course page showing the download link inserted by this add-on.
 Text: "Download video: Lecture Fundamentals of applied theoretical sciences"
@@ -48,14 +48,14 @@ Below are the links: "640x360 (mp4)", "1280x720 (mp4)", and "1920x1080 (mp4)".](
   - These should be direct links to video files (with the displayed resolution).
   - Hover (on desktop, probably long-press on mobile? didn't try that) a link to see more details.
 
-### where to get it?
+## where to get it?
 Sadly, this extension was not accepted into Mozilla's offizial addon gallery, because the target audience is too limited.
 Nevertheless it is possible to get extensions signed by Mozilla and self-distribute them.
 (With a bit of luck even automated updates should work just fine.)
 
-#### downloads, with caveats _\*sigh\*_
+### downloads, with caveats _\*sigh\*_
 
-##### external site
+#### external site
 You should (hopefully) be able to directly download the latest version from:\
 <https://dev.sudo42.de/public/ff-addons/openexcellencemedia-latest.xpi>\
 **Caveat:**
@@ -69,19 +69,19 @@ Here is a simple page with the sole purpose of being on the same domain as the e
 (This should kinda work around the problem mentioned above.
 Slightly more information is provided over there.)
 
-##### from here
+#### from here
 The [releases page of this project](https://git.fsmpi.rwth-aachen.de/moodleOpenCastDownloads/ff-ext/-/releases) should contain them as well.\
 **Caveat:**
 This one has caveats as well: GitLab will usually deliver the files in a way, that they are downloaded instead of prompting for installtion.\
 You should nevertheless be able to install the downloaded file from Firefox's addon page.
 
-#### grab the source
+### grab the source
 
 And, of course, you can build this extension from source on your own.
 Or modify it to work as user script.
 This project is licensed unser EUPL, so feel free to use, read, adapt, or share the code.
 
-### 2do
+## 2do
   - [X] going to bed
   - [ ] styling (I love CSS, not joking here! **Update:** A little bit of css is present. Should work for now.)
   - [ ] adding links in video-only tabs, too
