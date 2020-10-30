@@ -55,7 +55,7 @@ Nevertheless it is possible to get extensions signed by Mozilla and self-distrib
 
 ### downloads, with caveats _\*sigh\*_
 
-tl;dr: Build it from source yourself, or use [the download/install site](https://dev.sudo42.de/public/ff-addons/oem.html).\
+tl;dr: Use the source, or [visit the download/install site](https://dev.sudo42.de/public/ff-addons/oem.html).\
 Read below for slightly more in-depth information.
 
 #### external site
