@@ -1,17 +1,47 @@
 
-._ext-openExcellenceMedia_container .videoLinkList {
+._ext-openExcellenceMedia_container,
+.openExcellenceMediaPlugin {
   --c-rwth-violett: rgb(97,33,88);
   --c-link-bg: var(--c-rwth-violett);
   --c-link-fg: #fff;
 }
-._ext-openExcellenceMedia_container .videoLinkList {
+.openExcellenceMediaPlugin.oemPopOut {
+  position: fixed;
+  top: 3.4em;
+  left: 2.1em;
+  right: 2.1em;
+  bottom: unset;
+  z-index: 42021;
+  text-align: center;
+  font-size: 1.1em;
+}
+._ext-openExcellenceMedia_container .videoLinkList,
+.openExcellenceMediaPlugin .videoLinkList {
   list-style-type: none;
   padding: 0;
   display: flex;
   flex-direction: row;
 }
+.openExcellenceMediaPlugin .videoLinkList {
+/*  flex-direction: column;
+  width: max-content;
+  align-items: stretch;
+  margin: .5em .25em; */
+  margin: .5em auto;
+  width: max-content;
+  max-width: 100%;
+  padding: .5em .25em;
+  background: rgba(242, 242, 242, .7);
+  opacity: .7;
+  box-shadow: 0 0 1em 0 rgba(0,0,0,.7);
+}
+.openExcellenceMediaPlugin .videoLinkList:hover,
+.openExcellenceMediaPlugin .videoLinkList:focus-within {
+  opacity: 1;
+}
 
-._ext-openExcellenceMedia_container .videoLinkList .videoLink {
+._ext-openExcellenceMedia_container .videoLinkList .videoLink,
+.openExcellenceMediaPlugin .videoLinkList .videoLink {
   display: inline-block;
   padding: .5em 1em;
   background: var(--c-link-bg);
@@ -19,3 +49,7 @@
   margin: .25em .5em;
   border-radius: .2em;
 }
+/* .openExcellenceMediaPlugin .videoLinkList .videoLink {
+  display: block;
+  text-align: center;
+} */

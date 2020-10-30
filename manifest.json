@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "OpenExcellenceMedia",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adds download links to videos on RWTH moodle which are served using an OpenCast iframe.",
   "homepage_url": "https://git.fsmpi.rwth-aachen.de/moodleOpenCastDownloads/ff-ext",
   "icons": {

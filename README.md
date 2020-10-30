@@ -23,7 +23,7 @@ Nevertheless, in the code it is called _Open Excellence Media_  or for short **O
 ## what is it good for?
 
 
-Most videos (eg. lecture recordings) embedded in RWTH Aachen University's moodle are hosted on an OpenCast.
+Most videos (eg. lecture recordings) embedded in RWTH Aachen University's moodle are hosted on an OpenCast instance.
 These videos are usually embedded using an iframe, which makes it (intentionally) hard to download them for offline use.
 
 This extension want's to help by liberating lecture recordings and other videos provided in this rather restrictive manner.
@@ -55,15 +55,18 @@ Nevertheless it is possible to get extensions signed by Mozilla and self-distrib
 
 ### downloads, with caveats _\*sigh\*_
 
+tl;dr: Build it from source yourself, or use [the download/install site](https://dev.sudo42.de/public/ff-addons/oem.html).\
+Read below for slightly more in-depth information.
+
 #### external site
-You should (hopefully) be able to directly download the latest version from:\
+~~You should (hopefully) be able to directly download the latest version from:\
 <https://dev.sudo42.de/public/ff-addons/openexcellencemedia-latest.xpi>\
 **Caveat:**
 Simply clicking the link is unlikely to work.
 Firefox seems to block installations of extensions, if a link does not point to the same domain.\
-~~I'm sorry … please just copy it and open the page yourself.~~
+I'm sorry … please just copy it and open the page yourself.~~
 
-**Update (and potential solution for the caveat described above):**
+**Update (and potential solution for the caveat described above):**\
 Here is a simple page with the sole purpose of being on the same domain as the extension file it links to:\
 <https://dev.sudo42.de/public/ff-addons/oem.html>\
 (This should kinda work around the problem mentioned above.
@@ -84,7 +87,7 @@ This project is licensed unser EUPL, so feel free to use, read, adapt, or share 
 ## 2do
   - [X] going to bed
   - [ ] styling (I love CSS, not joking here! **Update:** A little bit of css is present. Should work for now.)
-  - [ ] adding links in video-only tabs, too
+  - [X] adding links in video-only tabs, too
   - [X] packaging
   - [X] good name + icon (kinda done … _"good"_ is highly subjective, but I will give it a pass)
   - [ ] further investigation into the OpenCast API (looks like one might be able to have some fun with it)
